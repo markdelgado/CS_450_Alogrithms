@@ -273,6 +273,63 @@ main {
   color: #0f172a;
 }
 
+.memory-bar {
+  display: flex;
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.mem-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #0f172a;
+  border-right: 1px solid #e2e8f0;
+}
+
+.mem-block:last-child {
+  border-right: none;
+}
+
+.mem-block.allocated {
+  background: linear-gradient(120deg, #dbeafe, #bfdbfe);
+  color: #0f172a;
+}
+
+.mem-block.free {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.mem-block.small-text {
+  font-size: 0.8rem;
+}
+
+.flash {
+  animation: flash 0.6s ease;
+}
+
+@keyframes flash {
+  0% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.small-text {
+  font-size: 0.85rem;
+}
+
 .sync-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
