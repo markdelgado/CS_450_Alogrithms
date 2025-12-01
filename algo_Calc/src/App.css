@@ -380,3 +380,66 @@ main {
   padding: 0.25rem 0;
   border-bottom: 1px dashed #e2e8f0;
 }
+
+.bank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.matrix-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #0f172a;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 0.4rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.matrix-table thead {
+  background: #f8fafc;
+}
+
+.row-label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.bank-request {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bank-request select,
+.bank-request input {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5f5;
+  font-size: 0.95rem;
+}
+
+.bank-request label {
+  font-size: 0.9rem;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.request-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
