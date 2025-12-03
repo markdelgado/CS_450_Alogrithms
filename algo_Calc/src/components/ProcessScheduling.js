@@ -319,6 +319,33 @@ const ProcessScheduling = () => {
             </div>
           </div>
 
+          <div className="gantt">
+            <div className="stat-label">Gantt Chart</div>
+            <div className="gantt-track">
+              {(() => {
+                const minStart = Math.min(...results.schedule.map((proc) => proc.startTime));
+                const maxEnd = Math.max(...results.schedule.map((proc) => proc.completionTime));
+                const span = Math.max(maxEnd - minStart, 1);
+                return results.schedule.map((process) => {
+                  const left = ((process.startTime - minStart) / span) * 100;
+                  const width = ((process.completionTime - process.startTime) / span) * 100;
+                  return (
+                    <div
+                      key={process.id}
+                      className="gantt-bar"
+                      style={{ left: `${left}%`, width: `${width}%` }}
+                    >
+                      <span className="gantt-label">{process.name}</span>
+                      <small>
+                        {process.startTime} → {process.completionTime}
+                      </small>
+                    </div>
+                  );
+                });
+              })()}
+            </div>
+          </div>
+
           <div className="table-wrapper">
             <table className="process-table">
               <thead>
