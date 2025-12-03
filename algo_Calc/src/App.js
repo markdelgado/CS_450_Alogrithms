@@ -33,7 +33,8 @@ function App() {
     <div className="App">
       <nav className="navbar" aria-label="Algorithm sections">
         <div className="brand" role="button" tabIndex={0} onClick={() => setActive('home')} onKeyDown={() => setActive('home')}>
-          AlgoCalc
+          <span className="brand-mark">A</span>
+          AlgoLab
         </div>
         <ul>
           {views.map((item) => (
