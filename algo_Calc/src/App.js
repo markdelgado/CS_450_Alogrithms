@@ -14,7 +14,7 @@ import {
 const views = [
   { id: 'home', label: 'Home' },
   { id: 'process-scheduling', label: 'Process Scheduling', component: ProcessScheduling },
-  { id: 'process-synchronization', label: 'Process Synchronization', component: ProcessSynchronization },
+  { id: 'process-synchronization', label: 'Process Sync', component: ProcessSynchronization },
   { id: 'banks-algorithm', label: "Bank's Algorithm", component: BanksAlgorithm },
   { id: 'fit-algorithm', label: 'Fit Algorithm', component: FitAlgorithm },
   { id: 'page-replacement', label: 'Page Replacement', component: PageReplacement },
